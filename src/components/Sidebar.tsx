@@ -1,4 +1,4 @@
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { Linkedin, GitHub } from 'react-feather'
 import Polaroid from './Polaroid'
 
