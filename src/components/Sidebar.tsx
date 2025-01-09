@@ -4,7 +4,7 @@ import Polaroid from './Polaroid'
 
 const Sidebar = () => {
   return (
-    <div className='flex flex-col justify-top space-y-8 items-center pt-16 w-1/5 h-screen'>
+    <div className='flex flex-col justify-top space-y-8 items-center pl-4 pt-20 w-1/5 h-screen'>
       <Polaroid />
       <nav className='flex flex-col items-center'>
         {[
@@ -46,7 +46,9 @@ const Sidebar = () => {
           <span>GitHub</span>
         </NavLink>
       </div>
-      <p className='text-sm font-nunito text-gray-400 justify-self-end pt-48'>Made with ❤️</p>
+      <div className="h-1/2"></div>
+      <p className='text-sm font-nunito text-gray-400 justify-self-end pb-4'>Made with ❤️</p>
+    
     </div>
   )
 }
