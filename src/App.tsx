@@ -11,7 +11,7 @@ function App() {
     <Router>
       <div className="flex">
         <Sidebar />
-        <main className="w-4/5 h-max">
+        <main className="w-4/5 h-screen overflow-y-auto">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />

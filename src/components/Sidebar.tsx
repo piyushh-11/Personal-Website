@@ -18,7 +18,7 @@ const Sidebar = () => {
             to={link.to} 
             end 
             className={({ isActive }) => 
-              `flex flex-row justify-between items-center p-1 w-32 text-slate-400 font-nunito ${isActive ? 'font-bold text-slate-900' : ''} hover:scale-105 transition-transform duration-200`
+              `flex flex-row justify-between items-center p-1 w-32 text-gray-400 font-nunito ${isActive ? 'font-bold text-gray-900' : ''} hover:scale-105 transition-transform duration-200`
             }
             >
             <img className="w-6" src={`src/assets/icons/${link.icon}`} alt={link.label} />
@@ -45,8 +45,8 @@ const Sidebar = () => {
           <GitHub strokeWidth={1.5} className="w-6" />
           <span>GitHub</span>
         </NavLink>
-        
       </div>
+      <p className='text-sm font-nunito text-gray-400 justify-self-end pt-48'>Made with ❤️</p>
     </div>
   )
 }
