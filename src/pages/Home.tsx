@@ -23,18 +23,38 @@ const Home = () => {
 
         {/* Buttons */}
         <div className="flex flex-row justify-between">
-          <button className="bg-gray-500 text-white py-2 px-4 rounded">
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gray-500 text-white py-2 px-4 rounded text-center"
+          >
             Resume
-          </button>
-          <button className="bg-gray-500 text-white py-2 px-4 rounded">
+          </a>
+          <a
+            href="https://www.linkedin.com/in/piyush-hole"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gray-500 text-white py-2 px-4 rounded text-center"
+          >
             LinkedIn
-          </button>
-          <button className="bg-gray-500 text-white py-2 px-4 rounded">
+          </a>
+          <a
+            href="https://github.com/piyushh-11"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gray-500 text-white py-2 px-4 rounded text-center"
+          >
             GitHub
-          </button>
-          <button className="bg-gray-500 text-white py-2 px-4 rounded">
+          </a>
+          <a
+            href="https://www.youtube.com/@piyush-11"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gray-500 text-white py-2 px-4 rounded text-center"
+          >
             YouTube
-          </button>
+          </a>
         </div>
       </div>
 
@@ -158,7 +178,7 @@ const Home = () => {
           </div>
 
           <button className="bg-gray-500 text-white h-10 py-2 px-4 rounded">
-            GitHub
+            Devpost
           </button>
         </div>
       </div>
