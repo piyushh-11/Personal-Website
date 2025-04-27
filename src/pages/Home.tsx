@@ -72,7 +72,7 @@ const Home = () => {
         {/* Palo Alto Networks */}
         <div className="flex flex-row justify-between">
           <div className="flex flex-row gap-4">
-            <div className="bg-gray-500 w-12 h-12 rounded">
+            <div className="w-12 h-12 rounded">
               <img src={PANW} alt="" />
             </div>
 
@@ -90,7 +90,7 @@ const Home = () => {
         {/* Texas A&M DBF Team */}
         <div className="flex flex-row justify-between">
           <div className="flex flex-row gap-4">
-            <div className="bg-gray-500 w-12 h-12 rounded">
+            <div className="w-12 h-12 rounded">
               <img src={DBF} alt="" />
             </div>
 
@@ -108,7 +108,7 @@ const Home = () => {
         {/* Texas A&M */}
         <div className="flex flex-row justify-between">
           <div className="flex flex-row gap-4">
-            <div className="bg-gray-500 w-12 h-12 rounded">
+            <div className="w-12 h-12 rounded">
               <img src={TAMU} alt="" />
             </div>
 
@@ -126,7 +126,7 @@ const Home = () => {
         {/* NEA X GmbH */}
         <div className="flex flex-row justify-between">
           <div className="flex flex-row gap-4">
-            <div className="bg-gray-500 w-12 h-12 rounded">
+            <div className="w-12 h-12 rounded">
               <img src={NEAX} alt="" />
             </div>
 
