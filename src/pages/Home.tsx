@@ -2,7 +2,7 @@ const Home = () => {
   return (
     <div className="flex flex-col gap-12 sm:w-full md:w-1/2 lg:w-1/3 p-4">
       {/* Header */}
-      <div className="mt-24 flex flex-col gap-8">
+      <div className="mt-24 flex flex-col gap-12">
         {/* Text */}
         <div>
           <h1 className="text-4xl">
@@ -18,16 +18,16 @@ const Home = () => {
 
         {/* Buttons */}
         <div className="flex flex-row justify-between">
-          <button className="bg-gray-500 text-white py-2 px-4">
+          <button className="bg-gray-500 text-white py-2 px-4 rounded">
             Resume
           </button>
-          <button className="bg-gray-500 text-white py-2 px-4">
+          <button className="bg-gray-500 text-white py-2 px-4 rounded">
             LinkedIn
           </button>
-          <button className="bg-gray-500 text-white py-2 px-4">
+          <button className="bg-gray-500 text-white py-2 px-4 rounded">
             GitHub
           </button>
-          <button className="bg-gray-500 text-white py-2 px-4">
+          <button className="bg-gray-500 text-white py-2 px-4 rounded">
             YouTube
           </button>
         </div>
@@ -47,7 +47,7 @@ const Home = () => {
         {/* Palo Alto Networks */}
         <div className="flex flex-row justify-between">
           <div className="flex flex-row gap-4">
-            <div className="bg-gray-500 w-12 h-12"></div>
+            <div className="bg-gray-500 w-12 h-12 rounded"></div>
 
             <div>
               <h3 className="font-bold">Palo Alto Networks</h3>
@@ -63,7 +63,7 @@ const Home = () => {
         {/* Texas A&M DBF Team */}
         <div className="flex flex-row justify-between">
           <div className="flex flex-row gap-4">
-            <div className="bg-gray-500 w-12 h-12"></div>
+            <div className="bg-gray-500 w-12 h-12 rounded"></div>
 
             <div>
               <h3 className="font-bold">Texas A&M DBF Team</h3>
@@ -79,7 +79,7 @@ const Home = () => {
         {/* Texas A&M */}
         <div className="flex flex-row justify-between">
           <div className="flex flex-row gap-4">
-            <div className="bg-gray-500 w-12 h-12"></div>
+            <div className="bg-gray-500 w-12 h-12 rounded"></div>
 
             <div>
               <h3 className="font-bold">Texas A&M University</h3>
@@ -95,7 +95,7 @@ const Home = () => {
         {/* NEA X GmbH */}
         <div className="flex flex-row justify-between">
           <div className="flex flex-row gap-4">
-            <div className="bg-gray-500 w-12 h-12"></div>
+            <div className="bg-gray-500 w-12 h-12 rounded"></div>
 
             <div>
               <h3 className="font-bold">NEA X GmbH</h3>
@@ -114,37 +114,37 @@ const Home = () => {
         <h3 className="text-xl font-bold">Projects</h3>
 
         {/* Restaurant POS System */}
-        <div className="flex flex-row items-center justify-between">
+        <div className="flex flex-row justify-between">
           <div className="w-80">
             <h3 className="font-bold">Restaurant POS System</h3>
             <h3>Java, Swing, Spring Boot, PostgreSQL, Python, Pandas, AWS</h3>
           </div>
 
-          <button className="bg-gray-500 text-white h-12 py-2 px-4">
+          <button className="bg-gray-500 text-white h-10 py-2 px-4 rounded">
             GitHub
           </button>
         </div>
 
         {/* Restaurant POS System */}
-        <div className="flex flex-row items-center justify-between">
+        <div className="flex flex-row justify-between">
           <div className="w-80">
             <h3 className="font-bold">Mutual Fund Dashboard</h3>
             <h3>React, JavaScript, TailWindCSS, Node.js, Express.js, MongoDB</h3>
           </div>
 
-          <button className="bg-gray-500 text-white h-12 py-2 px-4">
+          <button className="bg-gray-500 text-white h-10 py-2 px-4 rounded">
             GitHub
           </button>
         </div>
 
         {/* Aggie Stops - Schedule Planner */}
-        <div className="flex flex-row items-center justify-between">
+        <div className="flex flex-row justify-between">
           <div className="w-80">
             <h3 className="font-bold">Aggie Stops - Schedule Planner</h3>
             <h3>React, TypeScript, TailWindCSS, Python, Selenium, Flask</h3>
           </div>
 
-          <button className="bg-gray-500 text-white h-12 py-2 px-4">
+          <button className="bg-gray-500 text-white h-10 py-2 px-4 rounded">
             GitHub
           </button>
         </div>
