@@ -1,3 +1,4 @@
+import FSAE from "/FSAE.png";
 import PANW from "/PANW.png";
 import TAMU from "/TAMU.png";
 import DBF from "/DBF.png";
@@ -5,7 +6,7 @@ import NEAX from "/NEA X.png";
 
 const Home = () => {
   return (
-    <div className="flex flex-col gap-12 sm:w-full md:w-1/2 lg:w-1/3 p-4">
+    <div className="flex flex-col gap-12 sm:w-full md:w-1/2 lg:w-1/3 2xl:w-1/4 p-4">
       {/* Header */}
       <div className="mt-24 flex flex-col gap-12">
         {/* Text */}
@@ -72,7 +73,25 @@ const Home = () => {
         {/* Palo Alto Networks */}
         <div className="flex flex-row justify-between">
           <div className="flex flex-row gap-4">
-            <div className="w-12 h-12 rounded">
+            <div className="w-12 h-12">
+              <img src={FSAE} alt="" className="rounded-md"/>
+            </div>
+
+            <div>
+              <h3 className="font-bold">Texas A&M Formula Electric</h3>
+              <h3>Software Engineer</h3>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="">August 2025 - Present</h3>
+          </div>
+        </div>
+
+        {/* Palo Alto Networks */}
+        <div className="flex flex-row justify-between">
+          <div className="flex flex-row gap-4">
+            <div className="w-12 h-12">
               <img src={PANW} alt="" />
             </div>
 
@@ -90,7 +109,7 @@ const Home = () => {
         {/* Texas A&M DBF Team */}
         <div className="flex flex-row justify-between">
           <div className="flex flex-row gap-4">
-            <div className="w-12 h-12 rounded">
+            <div className="w-12 h-12">
               <img src={DBF} alt="" />
             </div>
 
@@ -108,13 +127,13 @@ const Home = () => {
         {/* Texas A&M */}
         <div className="flex flex-row justify-between">
           <div className="flex flex-row gap-4">
-            <div className="w-12 h-12 rounded">
+            <div className="w-12 h-12">
               <img src={TAMU} alt="" />
             </div>
 
             <div>
               <h3 className="font-bold">Texas A&M University</h3>
-              <h3>Software Engineering Intern</h3>
+              <h3>Undergraduate Researcher</h3>
             </div>
           </div>
 
@@ -126,13 +145,13 @@ const Home = () => {
         {/* NEA X GmbH */}
         <div className="flex flex-row justify-between">
           <div className="flex flex-row gap-4">
-            <div className="w-12 h-12 rounded">
+            <div className="w-12 h-12">
               <img src={NEAX} alt="" />
             </div>
 
             <div>
               <h3 className="font-bold">NEA X GmbH</h3>
-              <h3>Undergraduate Researcher</h3>
+              <h3>Software Engineering Intern</h3>
             </div>
           </div>
 
