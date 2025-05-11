@@ -3,6 +3,8 @@ import PANW from "/PANW.png";
 import TAMU from "/TAMU.png";
 import DBF from "/DBF.png";
 import NEAX from "/NEA X.png";
+import NEA from "/NEA.png";
+import ACC from "/ACC.png";
 
 const Home = () => {
   return (
@@ -66,27 +68,9 @@ const Home = () => {
         <p> Welcome! I'm Piyush Hole, a Computer Science Honors student at Texas A&M University, where I'm constantly exploring the fascinating intersection of code, mathematics, and statistics. This portfolio is a curated collection of projects and experiences that reflect my passion for building elegant and effective solutions. </p>
       </div>
 
-      {/* Experience */}
+      {/* Work Experience */}
       <div className="flex flex-col gap-4">
-        <h3 className="text-xl font-bold">Experience</h3>
-
-        {/* FSAE */}
-        <div className="flex flex-row justify-between">
-          <div className="flex flex-row gap-4">
-            <div className="w-12 h-12">
-              <img src={FSAE} alt="" className="rounded-md" />
-            </div>
-
-            <div>
-              <h3 className="font-bold">Texas A&M Formula Electric</h3>
-              <h3>Software Engineer</h3>
-            </div>
-          </div>
-
-          <div>
-            <h3 className="">Incoming August 2025</h3>
-          </div>
-        </div>
+        <h3 className="text-xl font-bold">Work Experience</h3>
 
         {/* Palo Alto Networks */}
         <div className="flex flex-row justify-between">
@@ -103,6 +87,83 @@ const Home = () => {
 
           <div>
             <h3 className="">May 2025 - Aug 2025</h3>
+          </div>
+        </div>
+
+        {/* NEA X GmbH */}
+        <div className="flex flex-row justify-between">
+          <div className="flex flex-row gap-4">
+            <div className="w-12 h-12">
+              <img src={NEAX} alt="" />
+            </div>
+
+            <div>
+              <h3 className="font-bold">NEA X GmbH</h3>
+              <h3>Software Engineering Intern</h3>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="">May 2024 - Jul 2024</h3>
+          </div>
+        </div>
+
+        {/* Neuman & Esser */}
+        <div className="flex flex-row justify-between">
+          <div className="flex flex-row gap-4">
+            <div className="w-12 h-12">
+              <img src={NEA} alt="" />
+            </div>
+
+            <div>
+              <h3 className="font-bold">Neuman & Esser</h3>
+              <h3>Technology Intern</h3>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="">May 2023 - Aug 2023</h3>
+          </div>
+        </div>
+      </div>
+
+      {/* Campus Involvement */}
+      <div className="flex flex-col gap-4">
+        <h3 className="text-xl font-bold">Campus Involvement</h3>
+
+        {/* FSAE */}
+        <div className="flex flex-row justify-between">
+          <div className="flex flex-row gap-4">
+            <div className="w-12 h-12">
+              <img src={FSAE} alt="" className="rounded-md" />
+            </div>
+
+            <div>
+              <h3 className="font-bold">Texas A&M Formula Electric</h3>
+              <h3>Software Engineer</h3>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="">Incoming Aug 2025</h3>
+          </div>
+        </div>
+
+        {/* Aggie Coding Club */}
+        <div className="flex flex-row justify-between">
+          <div className="flex flex-row gap-4">
+            <div className="w-12 h-12">
+              <img src={ACC} alt="" className="rounded-md"/>
+            </div>
+
+            <div>
+              <h3 className="font-bold">Aggie Coding Club</h3>
+              <h3>Project Manager</h3>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="">Jan 2025 - May 2025</h3>
           </div>
         </div>
 
@@ -124,7 +185,7 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Texas A&M */}
+        {/* Undergraduate Research */}
         <div className="flex flex-row justify-between">
           <div className="flex flex-row gap-4">
             <div className="w-12 h-12">
@@ -139,24 +200,6 @@ const Home = () => {
 
           <div>
             <h3 className="">Aug 2024 - May 2025</h3>
-          </div>
-        </div>
-
-        {/* NEA X GmbH */}
-        <div className="flex flex-row justify-between">
-          <div className="flex flex-row gap-4">
-            <div className="w-12 h-12">
-              <img src={NEAX} alt="" />
-            </div>
-
-            <div>
-              <h3 className="font-bold">NEA X GmbH</h3>
-              <h3>Software Engineering Intern</h3>
-            </div>
-          </div>
-
-          <div>
-            <h3 className="">May 2024 - Jul 2024</h3>
           </div>
         </div>
       </div>
