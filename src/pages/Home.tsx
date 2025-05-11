@@ -25,7 +25,7 @@ const Home = () => {
         {/* Buttons */}
         <div className="flex flex-row justify-between">
           <a
-            href="/resume.pdf"
+            href="/Piyush_Hole.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gray-500 text-white py-2 px-4 rounded text-center"
@@ -74,7 +74,7 @@ const Home = () => {
         <div className="flex flex-row justify-between">
           <div className="flex flex-row gap-4">
             <div className="w-12 h-12">
-              <img src={FSAE} alt="" className="rounded-md"/>
+              <img src={FSAE} alt="" className="rounded-md" />
             </div>
 
             <div>
@@ -172,9 +172,14 @@ const Home = () => {
             <h3>Java, Swing, Spring Boot, PostgreSQL, Python, Pandas, AWS</h3>
           </div>
 
-          <button className="bg-gray-500 text-white h-10 py-2 px-4 rounded">
+          <a
+            href="https://github.com/CSCE331-Spring2025/project2-team54"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gray-500 text-white h-10 py-2 px-4 rounded flex items-center justify-center"
+          >
             GitHub
-          </button>
+          </a>
         </div>
 
         {/* Restaurant POS System */}
@@ -184,9 +189,14 @@ const Home = () => {
             <h3>React, JavaScript, TailWindCSS, Node.js, Express.js, MongoDB</h3>
           </div>
 
-          <button className="bg-gray-500 text-white h-10 py-2 px-4 rounded">
+          <a
+            href="https://github.com/piyushh-11/gs-mutual-fund-calculator"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gray-500 text-white h-10 py-2 px-4 rounded flex items-center justify-center"
+          >
             GitHub
-          </button>
+          </a>
         </div>
 
         {/* Aggie Stops - Schedule Planner */}
@@ -196,9 +206,14 @@ const Home = () => {
             <h3>React, TypeScript, TailWindCSS, Python, Selenium, Flask</h3>
           </div>
 
-          <button className="bg-gray-500 text-white h-10 py-2 px-4 rounded">
-            Devpost
-          </button>
+          <a
+            href="https://devpost.com/software/studystops"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gray-500 text-white h-10 py-2 px-4 rounded flex items-center justify-center"
+          >
+            DevPost
+          </a>
         </div>
       </div>
 
