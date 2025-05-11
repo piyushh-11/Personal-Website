@@ -70,7 +70,7 @@ const Home = () => {
       <div className="flex flex-col gap-4">
         <h3 className="text-xl font-bold">Experience</h3>
 
-        {/* Palo Alto Networks */}
+        {/* FSAE */}
         <div className="flex flex-row justify-between">
           <div className="flex flex-row gap-4">
             <div className="w-12 h-12">
@@ -84,7 +84,7 @@ const Home = () => {
           </div>
 
           <div>
-            <h3 className="">August 2025 - Present</h3>
+            <h3 className="">Incoming August 2025</h3>
           </div>
         </div>
 
