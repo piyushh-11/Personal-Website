@@ -5,6 +5,7 @@ import DBF from "/DBF.png";
 import NEAX from "/NEA X.png";
 import NEA from "/NEA.png";
 import ACC from "/ACC.png";
+import CTDL from "/CTDL.png";
 
 const Home = () => {
   return (
@@ -13,14 +14,14 @@ const Home = () => {
       <div className="mt-24 flex flex-col gap-12">
         {/* Text */}
         <div>
-          <h1 className="text-4xl">
+          <h1 className="text-3xl sm:text-4xl">
             Hey, I'm <span className="font-bold">Piyush</span>
           </h1>
-          <h1 className="text-4xl">
-            a Student at <span className="font-bold">Texas A&M</span>
+          <h1 className="text-3xl sm:text-4xl">
+            a <span className="font-bold">Computer Science</span>
           </h1>
-          <h1 className="text-4xl">
-            studying <span className="font-bold">Computer Science</span>
+          <h1 className="text-3xl sm:text-4xl">
+            student at <span className="font-bold">Texas A&M</span>
           </h1>
         </div>
 
@@ -63,14 +64,32 @@ const Home = () => {
 
       {/* About Me */}
       <div className="flex flex-col gap-4">
-        <h3 className="text-xl font-bold">About Me</h3>
+        <h3 className="text-lg sm:text-xl font-bold">About Me</h3>
 
         <p> Welcome! I'm Piyush Hole, a Computer Science Honors student at Texas A&M University, where I'm constantly exploring the fascinating intersection of code, mathematics, and statistics. This portfolio is a curated collection of projects and experiences that reflect my passion for building elegant and effective solutions. </p>
       </div>
 
       {/* Work Experience */}
       <div className="flex flex-col gap-4">
-        <h3 className="text-xl font-bold">Work Experience</h3>
+        <h3 className="text-lg sm:text-xl font-bold">Work Experience</h3>
+
+        {/* Citadel */}
+        <div className="flex flex-row justify-between">
+          <div className="flex flex-row gap-4">
+            <div className="w-12 h-12">
+              <img src={CTDL} alt="" />
+            </div>
+
+            <div>
+              <h3 className="font-bold">Citadel</h3>
+              <h3>Software Engineering Intern</h3>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="">Incoming Summer 2026</h3>
+          </div>
+        </div>
 
         {/* Palo Alto Networks */}
         <div className="flex flex-row justify-between">
@@ -129,7 +148,7 @@ const Home = () => {
 
       {/* Campus Involvement */}
       <div className="flex flex-col gap-4">
-        <h3 className="text-xl font-bold">Campus Involvement</h3>
+        <h3 className="text-lg sm:text-xl font-bold">Campus Involvement</h3>
 
         {/* FSAE */}
         <div className="flex flex-row justify-between">
@@ -206,7 +225,7 @@ const Home = () => {
 
       {/* Projects */}
       <div className="flex flex-col gap-4">
-        <h3 className="text-xl font-bold">Projects</h3>
+        <h3 className="text-lg sm:text-xl font-bold">Projects</h3>
 
         {/* Restaurant POS System */}
         <div className="flex flex-row justify-between">
