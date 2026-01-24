@@ -11,6 +11,8 @@ type MenuBarProps = {
   closeWindow: (id: string) => void
   openWindow: (type: string) => void
   reducedMotion: boolean
+  theme: 'light' | 'dark'
+  setTheme: (value: 'light' | 'dark') => void
   setReducedMotion: (value: boolean) => void
 }
 
@@ -22,6 +24,8 @@ function MenuBar({
   closeWindow,
   openWindow,
   reducedMotion,
+  theme,
+  setTheme,
   setReducedMotion,
 }: MenuBarProps) {
   const [openMenu, setOpenMenu] = useState<MenuKey | null>(null)
@@ -173,8 +177,14 @@ function MenuBar({
             {weather.label}
           </span>
           <span className="menu-status">{time}</span>
-          <button type="button" className="menu-status-button" aria-label="Theme toggle">
-            ◐
+          <button
+            type="button"
+            className="menu-status-button"
+            aria-label="Toggle light and dark mode"
+            aria-pressed={theme === 'dark'}
+            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+          >
+            {theme === 'dark' ? '◐' : '◑'}
           </button>
         </div>
       </div>

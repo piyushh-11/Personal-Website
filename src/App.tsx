@@ -36,12 +36,14 @@ const createId = () =>
 function App() {
   const [windows, setWindows] = useState<WindowData[]>([])
   const [focusedWindowId, setFocusedWindowId] = useState<string | null>(null)
+  const [theme, setTheme] = useState<'dark' | 'light'>('dark')
   const [reducedMotion, setReducedMotion] = useState(() => {
     if (typeof window === 'undefined') return false
     return window.matchMedia('(prefers-reduced-motion: reduce)').matches
   })
   const zCounterRef = useRef(0)
   const userReducedMotionOverride = useRef(false)
+  const userThemeOverride = useRef(false)
 
   const focusWindow = (id: string) => {
     setWindows((prev) => {
@@ -185,12 +187,17 @@ function App() {
     : null
 
   return (
-    <div className={reducedMotion ? 'reduced-motion' : undefined}>
+    <div className={`${reducedMotion ? 'reduced-motion ' : ''}theme-${theme}`}>
       <MenuBar
         focusedWindow={focusedWindow}
         closeWindow={closeWindow}
         openWindow={openWindow}
         reducedMotion={reducedMotion}
+        theme={theme}
+        setTheme={(value) => {
+          userThemeOverride.current = true
+          setTheme(value)
+        }}
         setReducedMotion={(value) => {
           userReducedMotionOverride.current = true
           setReducedMotion(value)
