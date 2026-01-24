@@ -54,7 +54,6 @@ function Window({
   const clampPosition = (nextX: number, nextY: number) => {
     const rect = windowRef.current?.getBoundingClientRect()
     const width = rect?.width ?? 520
-    const height = rect?.height ?? 360
     const minX = -(width - TITLEBAR_VISIBLE)
     const maxX = window.innerWidth - TITLEBAR_VISIBLE
     const minY = 0
