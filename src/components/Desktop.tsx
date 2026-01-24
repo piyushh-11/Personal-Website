@@ -3,7 +3,7 @@ import Window from './Window'
 
 const apps = [
   { id: 'about', label: 'About', icon: '👋' },
-  { id: 'why-hci', label: 'WhyHCI', icon: '🧠' },
+  { id: 'why-hci', label: 'HCI', icon: '🧠' },
   { id: 'course-stack', label: 'Courses', icon: '📚' },
   { id: 'career-path', label: 'Career', icon: '🧭' },
   { id: 'gallery', label: 'Gallery', icon: '🖼️' },

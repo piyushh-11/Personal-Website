@@ -17,7 +17,7 @@ function formatWeatherLabel(temperature: number, unit: string) {
 }
 
 function useWeather() {
-  const [state, setState] = useState<WeatherState>({ label: 'CStat …', loading: true })
+  const [state, setState] = useState<WeatherState>({ label: '…', loading: true })
   const intervalRef = useRef<number | null>(null)
 
   useEffect(() => {
@@ -54,7 +54,7 @@ function useWeather() {
         }
       } catch (error) {
         if (!isMounted) return
-        setState({ label: 'CStat —', loading: false })
+        setState({ label: '—', loading: false })
       }
     }
 

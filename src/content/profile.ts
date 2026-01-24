@@ -24,12 +24,7 @@ export const profile = {
     paragraphs: [
       'I’m drawn to HCI because I’ve seen how great engineering can still fall flat when the human story is missing. At Palo Alto Networks, I worked on a Customer 360 analytics platform in Python and React TS, and the hardest part wasn’t throughput,it was making the data feel coherent and actionable for teams handling 40k cases a month. On the Formula Electric team, a mailing system only works if the status, bounces, and queues are legible. Same with the Design Build Fly work: scraping 3,000+ configs and fusing sensors with a Kalman Filter is only valuable if the results can be understood and used.',
       'This class is a chance to connect those dots, pairing my systems background with intentional interaction design. I want to learn how to ask better questions, prototype faster, and validate what users actually experience, not just what my logs say. That shift matters for where I’m headed: I’m joining Citadel’s Commodities engineering team next summer, and I want to build tools where market data feels explorable instead of intimidating.',
-    ],
-    settings: [
-      { label: 'Program', value: 'Texas A&M CS Honors' },
-      { label: 'Graduation', value: 'May 2027' },
-      { label: 'Location', value: 'College Station, TX' },
-    ],
+    ]
   },
 
   courseStack: {

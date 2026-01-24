@@ -36,7 +36,12 @@ const createId = () =>
 function App() {
   const [windows, setWindows] = useState<WindowData[]>([])
   const [focusedWindowId, setFocusedWindowId] = useState<string | null>(null)
-  const [theme, setTheme] = useState<'dark' | 'light'>('dark')
+  const [theme, setTheme] = useState<'dark' | 'light'>(() => {
+    if (typeof window === 'undefined') return 'dark'
+    return window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light'
+  })
   const [reducedMotion, setReducedMotion] = useState(() => {
     if (typeof window === 'undefined') return false
     return window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -158,6 +163,17 @@ function App() {
     const handleChange = (event: MediaQueryListEvent) => {
       if (userReducedMotionOverride.current) return
       setReducedMotion(event.matches)
+    }
+    media.addEventListener('change', handleChange)
+    return () => media.removeEventListener('change', handleChange)
+  }, [])
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    const media = window.matchMedia('(prefers-color-scheme: dark)')
+    const handleChange = (event: MediaQueryListEvent) => {
+      if (userThemeOverride.current) return
+      setTheme(event.matches ? 'dark' : 'light')
     }
     media.addEventListener('change', handleChange)
     return () => media.removeEventListener('change', handleChange)
