@@ -13,7 +13,7 @@ const HEADERS = {
 }
 
 function formatWeatherLabel(temperature: number, unit: string) {
-  return `${temperature}°${unit}`
+  return `College Station, Texas     ${temperature}°${unit}`
 }
 
 function useWeather() {

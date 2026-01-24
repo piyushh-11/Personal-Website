@@ -136,6 +136,7 @@ body {
   color: inherit;
   font: inherit;
   cursor: pointer;
+  position: relative;
 }
 
 .dock-icon:focus-visible {
@@ -158,6 +159,17 @@ body {
   font-size: 12px;
   letter-spacing: 0.2px;
   color: rgba(231, 237, 247, 0.86);
+}
+
+.dock-icon__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(231, 237, 247, 0.45);
+}
+
+.dock-icon__dot--focused {
+  background: rgba(231, 237, 247, 0.95);
 }
 
 .headshot {

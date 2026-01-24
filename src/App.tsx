@@ -7,6 +7,7 @@ import CourseStackApp from './components/apps/CourseStackApp'
 import CareerPathApp from './components/apps/CareerPathApp'
 import GalleryApp from './components/apps/GalleryApp'
 import ReadmeApp from './components/apps/ReadmeApp'
+import SystemApp from './components/apps/SystemApp'
 
 type WindowData = {
   id: string
@@ -21,6 +22,7 @@ const WINDOW_SIZE = { width: 520, height: 360 }
 const WINDOW_OFFSET = 24
 const WINDOW_PADDING = 40
 const TITLE_BY_TYPE: Record<string, string> = {
+  system: 'About PiyushOS',
   about: 'About',
   'why-hci': 'Why HCI',
   'course-stack': 'Course Stack',
@@ -162,6 +164,8 @@ function App() {
 
   const renderWindowContent = (type: string) => {
     switch (type) {
+      case 'system':
+        return <SystemApp />
       case 'about':
         return <AboutApp />
       case 'why-hci':
@@ -188,6 +192,7 @@ function App() {
       <MenuBar
         focusedWindow={focusedWindow}
         closeWindow={closeWindow}
+        openWindow={openWindow}
         reducedMotion={reducedMotion}
         setReducedMotion={(value) => {
           userReducedMotionOverride.current = true

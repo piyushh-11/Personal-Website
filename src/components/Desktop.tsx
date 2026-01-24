@@ -38,6 +38,11 @@ function Desktop({
   focusedWindowId,
   renderWindowContent,
 }: DesktopProps) {
+  const openTypes = new Set(windows.map((window) => window.type))
+  const focusedType =
+    focusedWindowId &&
+    windows.find((window) => window.id === focusedWindowId)?.type
+
   return (
     <main className="desktop">
       <div className="wallpaper" aria-hidden="true" />
@@ -57,7 +62,7 @@ function Desktop({
           {renderWindowContent(window.type)}
         </Window>
       ))}
-      <Dock apps={apps} onOpenWindow={onOpenWindow} />
+      <Dock apps={apps} onOpenWindow={onOpenWindow} openTypes={openTypes} focusedType={focusedType ?? null} />
     </main>
   )
 }

@@ -9,6 +9,7 @@ type FocusedWindow = {
 type MenuBarProps = {
   focusedWindow: FocusedWindow
   closeWindow: (id: string) => void
+  openWindow: (type: string) => void
   reducedMotion: boolean
   setReducedMotion: (value: boolean) => void
 }
@@ -19,6 +20,7 @@ type MenuKey = (typeof MENUS)[number]
 function MenuBar({
   focusedWindow,
   closeWindow,
+  openWindow,
   reducedMotion,
   setReducedMotion,
 }: MenuBarProps) {
@@ -87,7 +89,15 @@ function MenuBar({
             </button>
             {openMenu === 'system' && (
               <div className="menu-panel" role="menu">
-                <button type="button" role="menuitem" className="menu-item">
+                <button
+                  type="button"
+                  role="menuitem"
+                  className="menu-item"
+                  onClick={() => {
+                    openWindow('system')
+                    setOpenMenu(null)
+                  }}
+                >
                   About PiyushOS
                 </button>
                 <div className="menu-separator" role="separator" />
