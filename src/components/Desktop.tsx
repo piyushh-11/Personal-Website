@@ -7,7 +7,6 @@ const apps = [
   { id: 'course-stack', label: 'Courses', icon: '📚' },
   { id: 'career-path', label: 'Career', icon: '🧭' },
   { id: 'gallery', label: 'Gallery', icon: '🖼️' },
-  { id: 'readme', label: 'README', icon: '📝' },
 ]
 
 type DesktopWindow = {

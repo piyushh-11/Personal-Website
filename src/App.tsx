@@ -6,7 +6,6 @@ import WhyHCIApp from './components/apps/WhyHCIApp'
 import CourseStackApp from './components/apps/CourseStackApp'
 import CareerPathApp from './components/apps/CareerPathApp'
 import GalleryApp from './components/apps/GalleryApp'
-import ReadmeApp from './components/apps/ReadmeApp'
 import SystemApp from './components/apps/SystemApp'
 
 type WindowData = {
@@ -176,8 +175,6 @@ function App() {
         return <CareerPathApp />
       case 'gallery':
         return <GalleryApp />
-      case 'readme':
-        return <ReadmeApp />
       default:
         return <p>Content coming soon.</p>
     }
