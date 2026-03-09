@@ -132,9 +132,13 @@ export default function About() {
           {about.tagline}
         </motion.p>
 
-        <div className="max-w-lg text-stone-500 leading-relaxed font-mono text-sm">
-          <span className="whitespace-pre-wrap">{bioText}</span>
-          <span className={`inline-block w-[2px] h-[1em] bg-accent align-middle ml-0.5 ${bioDone ? 'animate-pulse' : ''}`} />
+        <div className="relative max-w-lg text-stone-500 leading-relaxed font-mono text-sm">
+          {/* Reserve full height so layout never shifts */}
+          <span className="whitespace-pre-wrap opacity-0 select-none pointer-events-none" aria-hidden="true">{fullBio}</span>
+          <span className="absolute inset-0 whitespace-pre-wrap">
+            {bioText}
+            <span className={`inline-block w-[2px] h-[1em] bg-accent align-middle ml-0.5 ${bioDone ? 'animate-pulse' : ''}`} />
+          </span>
         </div>
 
         <motion.div
