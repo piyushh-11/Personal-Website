@@ -30,7 +30,7 @@ export default function Experience() {
 
         <div className="space-y-5">
           {experiences.map((exp, i) => (
-            <ExperienceCard key={i} exp={exp} index={i} />
+            <ExperienceCard key={i} exp={exp} />
           ))}
         </div>
       </div>
@@ -38,22 +38,9 @@ export default function Experience() {
   )
 }
 
-function ExperienceCard({ exp, index }: { exp: Exp; index: number }) {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-50px' })
-
+function ExperienceCard({ exp }: { exp: Exp }) {
   return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 30 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{
-        duration: 0.6,
-        ease: [0.22, 1, 0.36, 1],
-        delay: index * 0.1,
-      }}
-      className="group rounded-2xl border border-stone-200 bg-white p-7 sm:p-8 transition-all hover:border-orange-200 hover:bg-orange-50/30 hover:shadow-xl hover:shadow-orange-100/80 hover:-translate-y-0.5"
-    >
+    <div className="group rounded-2xl border border-stone-200 bg-white p-7 sm:p-8 transition-all hover:border-orange-200 hover:bg-orange-50/30 hover:shadow-xl hover:shadow-orange-100/80 hover:-translate-y-0.5">
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
         <div className="min-w-0">
           <h3 className="font-display text-2xl tracking-wide text-stone-900 group-hover:text-accent transition-colors">
@@ -76,6 +63,6 @@ function ExperienceCard({ exp, index }: { exp: Exp; index: number }) {
           </span>
         ))}
       </div>
-    </motion.div>
+    </div>
   )
 }

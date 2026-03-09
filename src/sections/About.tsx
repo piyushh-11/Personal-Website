@@ -1,7 +1,32 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import type { Variants } from 'framer-motion'
-import { useRef } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { about } from '../data/portfolio'
+
+function useTypewriter(text: string, startDelay: number, speed = 22) {
+  const [displayed, setDisplayed] = useState('')
+  const [done, setDone] = useState(false)
+
+  useEffect(() => {
+    let i = 0
+    setDisplayed('')
+    setDone(false)
+    const timeout = setTimeout(() => {
+      const interval = setInterval(() => {
+        i++
+        setDisplayed(text.slice(0, i))
+        if (i >= text.length) {
+          clearInterval(interval)
+          setDone(true)
+        }
+      }, speed)
+      return () => clearInterval(interval)
+    }, startDelay)
+    return () => clearTimeout(timeout)
+  }, [text, startDelay, speed])
+
+  return { displayed, done }
+}
 
 const ease = [0.22, 1, 0.36, 1] as const
 
@@ -22,6 +47,8 @@ const fadeUp = (delay: number): Variants => ({
   },
 })
 
+const fullBio = about.bio.join('\n\n')
+
 export default function About() {
   const ref = useRef(null)
   const { scrollYProgress } = useScroll({
@@ -30,6 +57,10 @@ export default function About() {
   })
   const blobY = useTransform(scrollYProgress, [0, 1], ['0%', '40%'])
   const marqueeX = useTransform(scrollYProgress, [0, 1], ['0%', '-10%'])
+
+  // name animation finishes at ~0.5 + 11 chars * 0.025 = ~0.775s → start bio at ~1300ms
+  const { displayed: bioText, done: bioDone } = useTypewriter(fullBio, 1300)
+
   return (
     <section
       id="about"
@@ -101,16 +132,10 @@ export default function About() {
           {about.tagline}
         </motion.p>
 
-        <motion.div
-          className="max-w-lg space-y-4 text-stone-500 leading-relaxed"
-          variants={fadeUp(1.1)}
-          initial="hidden"
-          animate="visible"
-        >
-          {about.bio.map((p, i) => (
-            <p key={i}>{p}</p>
-          ))}
-        </motion.div>
+        <div className="max-w-lg text-stone-500 leading-relaxed font-mono text-sm">
+          <span className="whitespace-pre-wrap">{bioText}</span>
+          <span className={`inline-block w-[2px] h-[1em] bg-accent align-middle ml-0.5 ${bioDone ? 'animate-pulse' : ''}`} />
+        </div>
 
         <motion.div
           className="mt-12 flex flex-wrap gap-4"
