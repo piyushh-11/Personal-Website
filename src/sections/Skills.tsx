@@ -24,12 +24,12 @@ export default function Skills() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
           <span
-            className="font-display text-[7rem] leading-none text-stone-300 select-none"
+            className="font-display text-[4rem] sm:text-[5.5rem] lg:text-[7rem] leading-none text-stone-300 select-none"
             aria-hidden
           >
             04
           </span>
-          <h2 className="text-3xl font-semibold text-stone-900 pb-3">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-stone-900 pb-2 sm:pb-3">
             Skills
           </h2>
         </motion.div>

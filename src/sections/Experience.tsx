@@ -3,9 +3,13 @@ import { useRef } from 'react'
 import { experiences } from '../data/portfolio'
 import type { Experience as Exp } from '../data/portfolio'
 
+const ease = [0.22, 1, 0.36, 1] as const
+
 export default function Experience() {
   const headerRef = useRef(null)
   const headerInView = useInView(headerRef, { once: true, margin: '-100px' })
+  const listRef = useRef(null)
+  const listInView = useInView(listRef, { once: true, margin: '-60px' })
 
   return (
     <section id="experience" className="py-24 px-6 md:px-12 lg:px-24">
@@ -15,22 +19,29 @@ export default function Experience() {
           className="flex items-end gap-4 mb-16"
           initial={{ opacity: 0, y: 40 }}
           animate={headerInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.7, ease }}
         >
           <span
-            className="font-display text-[7rem] leading-none text-stone-300 select-none"
+            className="font-display text-[4rem] sm:text-[5.5rem] lg:text-[7rem] leading-none text-stone-300 select-none"
             aria-hidden
           >
             02
           </span>
-          <h2 className="text-3xl font-semibold text-stone-900 pb-3">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-stone-900 pb-2 sm:pb-3">
             Experience
           </h2>
         </motion.div>
 
-        <div className="space-y-5">
+        <div ref={listRef} className="space-y-5">
           {experiences.map((exp, i) => (
-            <ExperienceCard key={i} exp={exp} />
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              animate={listInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, ease, delay: i * 0.1 }}
+            >
+              <ExperienceCard exp={exp} />
+            </motion.div>
           ))}
         </div>
       </div>
@@ -40,13 +51,13 @@ export default function Experience() {
 
 function ExperienceCard({ exp }: { exp: Exp }) {
   return (
-    <div className="group rounded-2xl border border-stone-200 bg-white p-7 sm:p-8 transition-all hover:border-orange-200 hover:bg-orange-50/30 hover:shadow-xl hover:shadow-orange-100/80 hover:-translate-y-0.5">
+    <div className="group rounded-2xl border border-stone-200 bg-paper p-7 sm:p-8 transition-all hover:border-orange-200 hover:bg-orange-50/30 hover:shadow-xl hover:shadow-orange-100/80 hover:-translate-y-0.5">
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
         <div className="min-w-0">
           <h3 className="font-display text-2xl tracking-wide text-stone-900 group-hover:text-accent transition-colors">
             {exp.role}
           </h3>
-          <p className="text-accent font-medium text-sm">{exp.company}</p>
+          <p className="text-accent/70 font-medium text-sm transition-colors">{exp.company}</p>
         </div>
         <span className="font-mono text-xs text-stone-400 shrink-0 sm:pt-1">
           {exp.period}

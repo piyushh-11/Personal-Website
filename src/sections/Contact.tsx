@@ -43,7 +43,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative bg-stone-900 text-white py-32 pb-40 px-6 md:px-12 lg:px-24 rounded-t-[2.5rem] mt-8 overflow-hidden"
+      className="relative bg-stone-900 text-white py-32 pb-40 px-6 md:px-12 lg:px-24 rounded-t-[2.5rem] mt-16 overflow-hidden"
     >
       {/* Decorative accent glow */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/[0.06] rounded-full blur-[150px] -translate-y-1/2 translate-x-1/3 pointer-events-none" />
@@ -58,12 +58,12 @@ export default function Contact() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
           <span
-            className="font-display text-[7rem] leading-none text-stone-600 select-none"
+            className="font-display text-[4rem] sm:text-[5.5rem] lg:text-[7rem] leading-none text-stone-600 select-none"
             aria-hidden
           >
             05
           </span>
-          <h2 className="text-3xl font-semibold pb-3">{contact.heading}</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold pb-2 sm:pb-3">{contact.heading}</h2>
         </motion.div>
 
         <motion.p
@@ -108,11 +108,15 @@ export default function Contact() {
               <span className="relative">
                 {s.label}
                 <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-accent transition-all duration-300 group-hover:w-full" />
-              </span>{' '}
-              &#8599;
+              </span>
+              {' '}&#8599;
             </a>
           ))}
         </motion.div>
+
+        <p className="mt-16 text-stone-600 text-xs font-mono">
+          &copy; {new Date().getFullYear()} Piyush Hole
+        </p>
       </div>
     </section>
   )

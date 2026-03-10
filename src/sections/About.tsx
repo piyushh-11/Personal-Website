@@ -137,7 +137,7 @@ export default function About() {
           <span className="whitespace-pre-wrap opacity-0 select-none pointer-events-none" aria-hidden="true">{fullBio}</span>
           <span className="absolute inset-0 whitespace-pre-wrap">
             {bioText}
-            <span className={`inline-block w-[2px] h-[1em] bg-accent align-middle ml-0.5 ${bioDone ? 'animate-pulse' : ''}`} />
+            <span className={`inline-block w-[2px] h-[1.1em] bg-accent align-middle ml-0.5 ${bioDone ? 'animate-caret-blink' : ''}`} />
           </span>
         </div>
 

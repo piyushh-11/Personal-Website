@@ -16,6 +16,7 @@ export default {
       animation: {
         marquee: 'marquee 35s linear infinite',
         'marquee-reverse': 'marquee-reverse 30s linear infinite',
+        'caret-blink': 'caret-blink 1s step-end infinite',
       },
       keyframes: {
         marquee: {
@@ -25,6 +26,10 @@ export default {
         'marquee-reverse': {
           '0%': { transform: 'translateX(-50%)' },
           '100%': { transform: 'translateX(0%)' },
+        },
+        'caret-blink': {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0' },
         },
       },
     },

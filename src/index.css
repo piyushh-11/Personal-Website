@@ -21,7 +21,7 @@ body {
 .grain-overlay {
   position: fixed;
   inset: 0;
-  z-index: 200;
+  z-index: 50;
   pointer-events: none;
   opacity: 0.04;
   overflow: hidden;
@@ -46,4 +46,13 @@ body {
   70% { transform: translate(0%, 15%); }
   80% { transform: translate(3%, 35%); }
   90% { transform: translate(-10%, 10%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

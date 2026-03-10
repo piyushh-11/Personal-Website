@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import Navbar from './components/Navbar'
 import GrainOverlay from './components/GrainOverlay'
 import About from './sections/About'
@@ -7,6 +8,10 @@ import Skills from './sections/Skills'
 import Contact from './sections/Contact'
 
 export default function App() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div className="min-h-screen bg-paper text-stone-900 font-sans antialiased">
       <GrainOverlay />
