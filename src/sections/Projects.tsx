@@ -48,7 +48,7 @@ export default function Projects() {
           >
             03
           </span>
-          <h2 className="text-2xl sm:text-3xl font-semibold text-stone-900 pb-2 sm:pb-3">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-stone-900 pb-2 sm:pb-3 text-balance">
             Projects
           </h2>
         </motion.div>
@@ -63,7 +63,7 @@ export default function Projects() {
             >
               <ProjectCard
                 href={proj.link}
-                className="group flex flex-col justify-between rounded-2xl bg-stone-900 text-white p-7 sm:p-8 h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+                className="group flex flex-col justify-between rounded-2xl bg-stone-900 text-white p-7 sm:p-8 h-full transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-stone-900"
               >
                 <div>
                   <div className="flex items-start justify-between gap-3 mb-3">

@@ -107,7 +107,7 @@ export default function About() {
           {about.greeting}
         </motion.p>
 
-        <h1 className="font-display text-[clamp(3.5rem,10vw,9rem)] leading-[0.9] text-stone-900 mb-6">
+        <h1 className="font-display text-[clamp(3.5rem,10vw,9rem)] leading-[0.9] text-stone-900 mb-6 text-balance">
           {about.name.split('').map((char, i) => (
             <span key={i} className="inline-block overflow-hidden pb-[0.15em]">
               <motion.span
@@ -149,14 +149,14 @@ export default function About() {
         >
           <a
             href="#projects"
-            className="group relative rounded-full bg-accent px-7 py-3 text-sm font-semibold text-white transition-all hover:shadow-lg hover:shadow-accent/25 hover:-translate-y-0.5 active:translate-y-0 overflow-hidden"
+            className="group relative rounded-full bg-accent px-7 py-3 text-sm font-semibold text-white transition-[transform,box-shadow] hover:shadow-lg hover:shadow-accent/25 hover:-translate-y-0.5 active:translate-y-0 overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
           >
             <span className="relative z-10">See my work</span>
             <span className="absolute inset-0 bg-gradient-to-r from-accent to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity" />
           </a>
           <a
             href="#contact"
-            className="rounded-full border-2 border-stone-900 px-7 py-3 text-sm font-semibold text-stone-900 transition-all hover:bg-stone-900 hover:text-white"
+            className="rounded-full border-2 border-stone-900 px-7 py-3 text-sm font-semibold text-stone-900 transition-[background-color,color,border-color] hover:bg-stone-900 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-900 focus-visible:ring-offset-2"
           >
             Get in touch
           </a>

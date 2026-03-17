@@ -63,7 +63,7 @@ export default function Contact() {
           >
             05
           </span>
-          <h2 className="text-2xl sm:text-3xl font-semibold pb-2 sm:pb-3">{contact.heading}</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold pb-2 sm:pb-3 text-balance">{contact.heading}</h2>
         </motion.div>
 
         <motion.p

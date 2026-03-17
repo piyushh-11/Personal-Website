@@ -63,7 +63,7 @@ export default function Navbar() {
                 )}
                 <a
                   href={`#${l.id}`}
-                  className={`relative block rounded-full px-3.5 py-2 text-xs font-medium transition-colors sm:text-sm sm:px-4 sm:py-2 ${
+                  className={`relative block rounded-full px-3.5 py-2 text-xs font-medium transition-colors sm:text-sm sm:px-4 sm:py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 ${
                     active === l.id
                       ? 'text-white'
                       : 'text-stone-400 hover:text-stone-200'

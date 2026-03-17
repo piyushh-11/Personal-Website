@@ -27,7 +27,7 @@ export default function Experience() {
           >
             02
           </span>
-          <h2 className="text-2xl sm:text-3xl font-semibold text-stone-900 pb-2 sm:pb-3">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-stone-900 pb-2 sm:pb-3 text-balance">
             Experience
           </h2>
         </motion.div>
@@ -51,7 +51,7 @@ export default function Experience() {
 
 function ExperienceCard({ exp }: { exp: Exp }) {
   return (
-    <div className="group rounded-2xl border border-stone-200 bg-paper p-7 sm:p-8 transition-all hover:border-orange-200 hover:bg-orange-50/30 hover:shadow-xl hover:shadow-orange-100/80 hover:-translate-y-0.5">
+    <div className="group rounded-2xl border border-stone-200 bg-paper p-7 sm:p-8 transition-[border-color,background-color,box-shadow,transform] hover:border-orange-200 hover:bg-orange-50/30 hover:shadow-xl hover:shadow-orange-100/80 hover:-translate-y-0.5">
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
         <div className="min-w-0">
           <h3 className="font-display text-2xl tracking-wide text-stone-900 group-hover:text-accent transition-colors">

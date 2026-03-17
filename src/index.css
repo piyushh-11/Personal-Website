@@ -12,9 +12,37 @@ body {
   overflow-x: hidden;
 }
 
+/* Skip link for keyboard / screen-reader users */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.5rem 1.25rem;
+  background: #E8553A;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 0 0 0.5rem 0.5rem;
+  transition: top 0.15s;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+
 ::selection {
   background-color: #E8553A;
   color: white;
+}
+
+/* Prevent double-tap zoom delay on interactive elements */
+a, button {
+  touch-action: manipulation;
+}
+
+/* Ensure anchor-linked sections aren't obscured */
+section[id] {
+  scroll-margin-top: 2rem;
 }
 
 /* Film grain overlay */

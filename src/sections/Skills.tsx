@@ -29,7 +29,7 @@ export default function Skills() {
           >
             04
           </span>
-          <h2 className="text-2xl sm:text-3xl font-semibold text-stone-900 pb-2 sm:pb-3">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-stone-900 pb-2 sm:pb-3 text-balance">
             Skills
           </h2>
         </motion.div>
