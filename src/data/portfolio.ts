@@ -33,7 +33,7 @@ export const experiences: Experience[] = [
     role: 'Software Engineer Intern (Incoming)',
     company: 'Citadel',
     period: 'June 2026 - August 2026',
-    logo: { kind: 'image', src: '/public/citadel.svg', alt: 'Citadel logo' },
+    logo: { kind: 'image', src: '/citadel.svg', alt: 'Citadel logo' },
     description:
       "Joining Citadel's Commodities engineering team in Houston, building infrastructure and analytics for market data.",
     tags: ['Infrastructure', 'Market Data', 'Analytics'],
@@ -42,7 +42,7 @@ export const experiences: Experience[] = [
     role: 'Software Engineer Intern',
     company: 'Palo Alto Networks',
     period: 'May 2025 - August 2025',
-    logo: { kind: 'image', src: '/public/panw.svg', alt: 'Palo Alto Networks logo' },
+    logo: { kind: 'image', src: '/panw.svg', alt: 'Palo Alto Networks logo' },
     description:
       'Built a full-stack Customer 360 analytics platform with Python and React TypeScript',
     tags: ['Python', 'React', 'TypeScript', 'BigQuery', 'Vertex AI'],
