@@ -50,14 +50,51 @@ export default function Experience() {
 }
 
 function ExperienceCard({ exp }: { exp: Exp }) {
+  const logo = exp.logo
+  const logoNode =
+    logo?.kind === 'image' ? (
+      <img
+        src={logo.src}
+        alt={logo.alt}
+        width={40}
+        height={40}
+        loading="lazy"
+        className="h-12 w-12 rounded-xl border border-stone-200 bg-white object-contain p-1"
+      />
+    ) : logo?.kind === 'text' ? (
+      <div
+        className="h-12 w-12 rounded-xl border border-stone-200 bg-white/70 flex items-center justify-center font-mono text-[11px] font-semibold text-stone-700"
+        aria-label={logo.ariaLabel ?? exp.company}
+      >
+        {logo.text}
+      </div>
+    ) : (
+      <div
+        className="h-12 w-12 rounded-xl border border-stone-200 bg-white/70 flex items-center justify-center font-mono text-[11px] font-semibold text-stone-700"
+        aria-label={exp.company}
+      >
+        {exp.company
+          .split(' ')
+          .filter(Boolean)
+          .slice(0, 2)
+          .map((w) => w[0]?.toUpperCase())
+          .join('')}
+      </div>
+    )
+
   return (
     <div className="group rounded-2xl border border-stone-200 bg-paper p-7 sm:p-8 transition-[border-color,background-color,box-shadow,transform] hover:border-orange-200 hover:bg-orange-50/30 hover:shadow-xl hover:shadow-orange-100/80 hover:-translate-y-0.5">
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
-        <div className="min-w-0">
-          <h3 className="font-display text-2xl tracking-wide text-stone-900 group-hover:text-accent transition-colors">
-            {exp.role}
-          </h3>
-          <p className="text-accent/70 font-medium text-sm transition-colors">{exp.company}</p>
+        <div className="min-w-0 flex items-start gap-4">
+          <div className="shrink-0 mt-0.5">{logoNode}</div>
+          <div className="min-w-0">
+            <h3 className="font-display text-2xl tracking-wide text-stone-900 group-hover:text-accent transition-colors">
+              {exp.role}
+            </h3>
+            <p className="text-accent/70 font-medium text-sm transition-colors">
+              {exp.company}
+            </p>
+          </div>
         </div>
         <span className="font-mono text-xs text-stone-400 shrink-0 sm:pt-1">
           {exp.period}

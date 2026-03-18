@@ -14,13 +14,26 @@ export interface Experience {
   period: string
   description: string
   tags: string[]
+  logo?:
+    | { kind: 'image'; src: string; alt: string }
+    | { kind: 'text'; text: string; ariaLabel?: string }
 }
 
 export const experiences: Experience[] = [
+  // {
+  //   role: 'Software Engineer Intern (Incoming)',
+  //   company: 'OpenAI',
+  //   period: 'August 2026 - December 2026',
+  //   logo: { kind: 'image', src: '/public/openai.svg', alt: 'OpenAI logo' },
+  //   description:
+  //     "Joining OpenAI's Applied engineering team in San Francisco, building ChatGPT and OpenAI API features",
+  //     tags: ['React', 'JavaScript', 'Python', 'APIs'],
+  // },
   {
     role: 'Software Engineer Intern (Incoming)',
     company: 'Citadel',
-    period: 'June 2026 – August 2026',
+    period: 'June 2026 - August 2026',
+    logo: { kind: 'image', src: '/public/citadel.svg', alt: 'Citadel logo' },
     description:
       "Joining Citadel's Commodities engineering team in Houston, building infrastructure and analytics for market data.",
     tags: ['Infrastructure', 'Market Data', 'Analytics'],
@@ -28,35 +41,12 @@ export const experiences: Experience[] = [
   {
     role: 'Software Engineer Intern',
     company: 'Palo Alto Networks',
-    period: 'May 2025 – August 2025',
+    period: 'May 2025 - August 2025',
+    logo: { kind: 'image', src: '/public/panw.svg', alt: 'Palo Alto Networks logo' },
     description:
-      'Built a full-stack Customer 360 analytics platform with Python and React TypeScript, processing 40,000 cases/month. Integrated BigQuery APIs with Vertex AI LLMs and designed async batch processing handling 50+ cases/s.',
+      'Built a full-stack Customer 360 analytics platform with Python and React TypeScript',
     tags: ['Python', 'React', 'TypeScript', 'BigQuery', 'Vertex AI'],
-  },
-  {
-    role: 'Software Engineer',
-    company: 'Texas A&M Formula Electric Team',
-    period: 'May 2025 – Present',
-    description:
-      'Led development of a high-throughput mailing system using distributed queues. Built delivery and security layers with Postfix, SPF, DKIM, and DMARC, and implemented live bounce analysis for enhanced reliability.',
-    tags: ['Distributed Systems', 'Postfix', 'Email Infrastructure'],
-  },
-  {
-    role: 'Software Engineer',
-    company: 'Texas A&M Design Build Fly Team',
-    period: 'September 2024 – May 2025',
-    description:
-      'Analyzed 3,000+ component configurations with Python web scraping to optimize aircraft design. Implemented real-time error correction via low-pass filtering and Kalman Filter sensor fusion for autonomous flight.',
-    tags: ['Python', 'Embedded Systems', 'Kalman Filter'],
-  },
-  {
-    role: 'Undergraduate Researcher',
-    company: 'Texas A&M University',
-    period: 'August 2024 – May 2025',
-    description:
-      'Engineered a decision modeling system for early detection of Bovine Respiratory Disease. Developed LSTM models with Python and Scikit-learn, achieving 86% accuracy in diagnosis.',
-    tags: ['Python', 'LSTM', 'Scikit-learn', 'ML'],
-  },
+  }
 ]
 
 export interface Project {
