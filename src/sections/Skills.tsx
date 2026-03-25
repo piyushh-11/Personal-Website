@@ -14,7 +14,7 @@ export default function Skills() {
   const catInView = useInView(catRef, { once: true, margin: '-60px' })
 
   return (
-    <section id="skills" className="py-24 overflow-hidden">
+    <section id="skills" className="overflow-hidden">
       <div className="max-w-5xl mx-auto px-6 md:px-12 lg:px-24 mb-16">
         <motion.div
           ref={headerRef}

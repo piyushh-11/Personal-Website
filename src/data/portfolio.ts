@@ -20,22 +20,22 @@ export interface Experience {
 }
 
 export const experiences: Experience[] = [
-  // {
-  //   role: 'Software Engineer Intern (Incoming)',
-  //   company: 'OpenAI',
-  //   period: 'August 2026 - December 2026',
-  //   logo: { kind: 'image', src: '/public/openai.svg', alt: 'OpenAI logo' },
-  //   description:
-  //     "Joining OpenAI's Applied engineering team in San Francisco, building ChatGPT and OpenAI API features",
-  //     tags: ['React', 'JavaScript', 'Python', 'APIs'],
-  // },
+  {
+    role: 'Software Engineer Intern (Incoming)',
+    company: 'OpenAI',
+    period: 'August 2026 - December 2026',
+    logo: { kind: 'image', src: '/openai.svg', alt: 'OpenAI logo' },
+    description:
+      "Joining OpenAI's Applied Engineering team in San Francisco, building ChatGPT and OpenAI API features",
+      tags: ['React', 'JavaScript', 'Python', 'APIs'],
+  },
   {
     role: 'Software Engineer Intern (Incoming)',
     company: 'Citadel',
     period: 'June 2026 - August 2026',
     logo: { kind: 'image', src: '/citadel.svg', alt: 'Citadel logo' },
     description:
-      "Joining Citadel's Commodities engineering team in Houston, building infrastructure and analytics for market data.",
+      "Joining Citadel's Commodities Engineering team in Houston, building infrastructure and analytics for market data.",
     tags: ['Infrastructure', 'Market Data', 'Analytics'],
   },
   {

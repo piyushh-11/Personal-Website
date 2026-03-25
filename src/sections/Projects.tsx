@@ -33,8 +33,8 @@ export default function Projects() {
   const gridInView = useInView(gridRef, { once: true, margin: '-60px' })
 
   return (
-    <section id="projects" className="py-24 px-6 md:px-12 lg:px-24 bg-paper/60">
-      <div className="max-w-5xl mx-auto">
+    <section id="projects" className="px-6 md:px-12 lg:px-24 bg-paper/60">
+      <div className="max-w-5xl mx-auto px-6 md:px-12 lg:px-24 mb-20">
         <motion.div
           ref={headerRef}
           className="flex items-end gap-4 mb-16"

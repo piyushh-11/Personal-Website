@@ -43,13 +43,13 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative bg-stone-900 text-white py-32 pb-40 px-6 md:px-12 lg:px-24 rounded-t-[2.5rem] mt-16 overflow-hidden"
+      className="relative bg-stone-900 text-white py-32 pb-26 px-6 md:px-12 lg:px-24 rounded-t-[2.5rem] mt-16 overflow-hidden"
     >
       {/* Decorative accent glow */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/[0.06] rounded-full blur-[150px] -translate-y-1/2 translate-x-1/3 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-accent/[0.03] rounded-full blur-[100px] translate-y-1/3 -translate-x-1/4 pointer-events-none" />
 
-      <div className="max-w-5xl mx-auto relative">
+      <div className="max-w-5xl mx-auto px-6 md:px-12 lg:px-24 mb-16">
         <motion.div
           ref={headerRef}
           className="flex items-end gap-4 mb-16"

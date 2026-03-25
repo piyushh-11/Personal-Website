@@ -13,7 +13,7 @@ export default function Experience() {
 
   return (
     <section id="experience" className="py-24 px-6 md:px-12 lg:px-24">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-5xl mx-auto px-6 md:px-12 lg:px-24">
         <motion.div
           ref={headerRef}
           className="flex items-end gap-4 mb-16"
@@ -88,7 +88,7 @@ function ExperienceCard({ exp }: { exp: Exp }) {
         <div className="min-w-0 flex items-start gap-4">
           <div className="shrink-0 mt-0.5">{logoNode}</div>
           <div className="min-w-0">
-            <h3 className="font-display text-2xl tracking-wide text-stone-900 group-hover:text-accent transition-colors">
+            <h3 className="font-display text-2xl tracking-wide text-stone-900">
               {exp.role}
             </h3>
             <p className="text-accent/70 font-medium text-sm transition-colors">
@@ -105,7 +105,7 @@ function ExperienceCard({ exp }: { exp: Exp }) {
         {exp.tags.map((tag) => (
           <span
             key={tag}
-            className="rounded-full border border-stone-200 bg-stone-50 px-3 py-0.5 text-xs font-medium text-stone-500 transition-colors group-hover:border-orange-200 group-hover:bg-orange-50 group-hover:text-orange-600"
+            className="rounded-full border border-stone-200 bg-stone-50 px-3 py-0.5 text-xs font-medium text-stone-500 transition-colors"
           >
             {tag}
           </span>
