@@ -23,7 +23,7 @@ export const experiences: Experience[] = [
   {
     role: 'Software Engineer Intern (Incoming)',
     company: 'OpenAI',
-    period: 'August 2026 - December 2026',
+    period: 'September 2026 - December 2026',
     logo: { kind: 'image', src: '/openai.svg', alt: 'OpenAI logo' },
     description:
       "Joining OpenAI's Applied Engineering team in San Francisco, building ChatGPT and OpenAI API features",
